@@ -1,6 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useState, useEffect } from 'react';
-import DetailHome from './DetailHome';
 import { useFocusEffect } from '@react-navigation/native';
 import { StatusBar, Platform, ScrollView, RefreshControl } from 'react-native';
 import theme from '../utils/theme';
@@ -26,7 +25,6 @@ function HomeStackScreen() {
   return (
     <HomeStack.Navigator headerMode='none'>
       <HomeStack.Screen name='Home' component={HomeScreen} />
-      <HomeStack.Screen name='Details' component={DetailHome} />
     </HomeStack.Navigator>
   );
 }

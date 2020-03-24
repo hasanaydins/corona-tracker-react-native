@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { createStackNavigator } from '@react-navigation/stack';
-import DetailSearch from './DetailSearch';
 import theme from '../utils/theme';
 import Box from '../components/Base/Box';
 import Text from '../components/Base/Text';
@@ -23,7 +22,6 @@ function SearchStackScreen() {
   return (
     <SearchStack.Navigator headerMode='none'>
       <SearchStack.Screen name='Search' component={Search} />
-      <SearchStack.Screen name='Details' component={DetailSearch} />
     </SearchStack.Navigator>
   );
 }
