@@ -1,3 +1,9 @@
+/***
+/*  Made with Love
+/*  Hasan Aydın ©
+/*
+/***/
+
 import * as React from 'react';
 import 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
