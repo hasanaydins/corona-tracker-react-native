@@ -1,3 +1,9 @@
+/***
+/*  Made with Love
+/*  Hasan Aydın ©
+/*  www.hasanaydins.com
+/***/
+
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useState, useEffect } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
@@ -82,10 +88,13 @@ function HomeScreen({ navigation }) {
       <Box
         flex={1}
         backgroundColor='bglight'
-        paddingHorizontal={26}
-        paddingVertical={30}
+        paddingLeft={26}
+        paddingRight={14}
+        paddingTop={26}
+        marginBottom={8}
       >
         <ScrollView
+          paddingRight={12}
           refreshControl={
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
           }

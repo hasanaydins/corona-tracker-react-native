@@ -17,8 +17,6 @@ export default function CardSayi({ icon, number, subtitle, placeholder }) {
       paddingVertical={20}
       boxShadow='0px 7px 6px #00000008'
     >
-
-
       {!placeholder ? (
         <Box flex={1} justifyContent='space-around' alignItems='center'>
           <Box>{icon}</Box>

@@ -1,7 +1,7 @@
 /***
 /*  Made with Love
 /*  Hasan Aydın ©
-/*
+/*  www.hasanaydins.com
 /***/
 
 import * as React from 'react';

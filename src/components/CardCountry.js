@@ -9,7 +9,6 @@ export default function CardCountry({
   deaths,
   recovered,
   navigation,
-  placehoder,
 }) {
   return (
     <Box
@@ -25,13 +24,15 @@ export default function CardCountry({
         flexDirection='row'
         alignItems='center'
         justifyContent='space-between'
-        onPress={() => null}
+        onPress={() => navigation.navigate('CountryDetail', { country })}
       >
-        <Text fontSize={18} fontWeight='bold'>
-          {country}
-        </Text>
+        <Box flex={1} mr={3}>
+          <Text fontSize={16} fontWeight='bold' numberOfLines={1}>
+            {country}
+          </Text>
+        </Box>
 
-        <Box flexDirection='row'>
+        <Box flexDirection='row' flex={1} justifyContent='flex-end'>
           <Box flexDirection='row' alignItems='center'>
             <Box size={10} bg='warning' borderRadius={999} mr={8} />
             <Text mr={10} fontSize={13} color='textdark'>

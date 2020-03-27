@@ -1,3 +1,9 @@
+/***
+/*  Made with Love
+/*  Hasan Aydın ©
+/*  www.hasanaydins.com
+/***/
+
 import React, { useState, useEffect } from 'react';
 import {
   Platform,
@@ -16,12 +22,19 @@ import SvgSearch from '../components/icons/Search';
 import { useFocusEffect } from '@react-navigation/native';
 import CardCountry from '../components/CardCountry';
 import Snackbar from 'react-native-snackbar';
+import ChartCases from './ChartCases';
+import ChartDeaths from './ChartDeaths';
+import CountryDetail from './CountryDetail';
+
 const SearchStack = createStackNavigator();
 
 function SearchStackScreen() {
   return (
     <SearchStack.Navigator headerMode='none'>
       <SearchStack.Screen name='Search' component={Search} />
+      <SearchStack.Screen name='CountryDetail' component={CountryDetail} />
+      <SearchStack.Screen name='ChartCases' component={ChartCases} />
+      <SearchStack.Screen name='ChartDeaths' component={ChartDeaths} />
     </SearchStack.Navigator>
   );
 }
@@ -35,11 +48,11 @@ function Search({ navigation }) {
   const [updatedDate, setUpdatedDate] = useState('');
   const [isclicked, setIsClicked] = useState(false);
 
-  const getSummaryData = async query => {
+  const getSummaryData = async (sort = 'active') => {
     setLoading(true);
 
     const response = await fetch(
-      'https://corona.lmao.ninja/countries?sort=deaths',
+      `https://corona.lmao.ninja/countries?sort=${sort}`,
     );
     const data = await response.json();
 
@@ -86,7 +99,7 @@ function Search({ navigation }) {
         value={text}
         secureTextEntry={false}
         autoCapitalize='words' // characters, sentences ,  none
-        placeholder='Bir isim giriniz'
+        placeholder='Ülke adı girin'
         paddingLeft={18}
         ref={ref => (this.inputText = ref)}
       />
@@ -120,13 +133,16 @@ function Search({ navigation }) {
       flex={1}
       backgroundColor={theme.colors.bglight}
       height='100%'
-      padding={26}
+      paddingTop={26}
+      paddingLeft={26}
+      paddingRight={14}
     >
       {/* BACKSGROUND */}
       <Box
         flexDirection='row'
         justifyContent='space-between'
         alignItems='center'
+        paddingRight={12}
       >
         <Text fontSize={23} fontWeight='bold'>
           Ülkeler
@@ -167,14 +183,15 @@ function Search({ navigation }) {
           </Text>
         </Box>
 
-        <Text fontSize={9} color='textlight'>
+        <Text fontSize={9} color='textlight' paddingRight={12}>
           Son güncelleme: {updatedDate}
         </Text>
       </Box>
+
       {countriesData.length ? (
         <FlatList
           ListHeaderComponent={isclicked ? renderHeader() : null}
-          style={{ marginTop: 18 }}
+          style={{ marginTop: 6, paddingRight: 12 }}
           data={countriesData}
           renderItem={item => (
             <CardCountry
