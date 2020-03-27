@@ -1,5 +1,5 @@
 # 🦠 Corona Cases Tracker App
-<img src="ss/demov2.gif" height="400" />
+<img src="ss/demo-v2.gif" height="400" />
 
 # 👋🏽 Giriş
 
