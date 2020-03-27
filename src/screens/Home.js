@@ -24,6 +24,7 @@ import { Fade, Placeholder, PlaceholderLine } from 'rn-placeholder';
 import Modal from 'react-native-modal';
 import Button from '../components/Base/Button';
 import SvgSettings from '../components/icons/Settings';
+import SvgDots from '../components/icons/Dots';
 
 const HomeStack = createStackNavigator();
 
@@ -110,7 +111,7 @@ function HomeScreen({ navigation }) {
             </Text>
 
             <Button onPress={() => setModalHakkinda(true)}>
-              <SvgSettings width={24} color='gray' />
+              <SvgDots width={24} color='black' />
             </Button>
           </Box>
 
