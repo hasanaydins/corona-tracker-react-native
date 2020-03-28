@@ -11,6 +11,12 @@ Merhabalar, malumunuz aylardır dünyamız bu virüsle baş etmeye çalışıyor
 * [React Navigation](https://github.com/react-navigation/react-navigation) 
 * [Styled Components](https://styled-components.com/) 
 * [Styled System](https://styled-system.com/) 
+* [axios](https://github.com/hasanaydins/corona-tracker-react-native) 
+* [react-native-modal](https://github.com/hasanaydins/corona-tracker-react-native) 
+* [react-native-pie](https://github.com/hasanaydins/corona-tracker-react-native) 
+* [react-native-responsive-linechart](https://github.com/hasanaydins/corona-tracker-react-native) 
+* [rn-placeholder](https://github.com/hasanaydins/corona-tracker-react-native) 
+   
 
 ## 🚀 Yükleme
 
