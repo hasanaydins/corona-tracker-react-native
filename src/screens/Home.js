@@ -12,6 +12,8 @@ import theme from '../utils/theme';
 import Pie from 'react-native-pie';
 import Snackbar from 'react-native-snackbar';
 
+import i18n from '../i18n';
+
 import Box from '../components/Base/Box';
 import Text from '../components/Base/Text';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -76,7 +78,7 @@ function HomeScreen({ navigation }) {
     getSummaryData();
     setRefreshing(false);
     Snackbar.show({
-      text: 'Yenilendi...',
+      text: i18n.get('refreshed'),
       textColor: 'white',
       backgroundColor: theme.colors.success,
       duration: Snackbar.LENGTH_SHORT,
@@ -107,7 +109,7 @@ function HomeScreen({ navigation }) {
             justifyContent='space-between'
           >
             <Text fontSize={23} fontWeight='bold'>
-              Dünya Geneli
+              {i18n.get('worldwide')}
             </Text>
 
             <Button onPress={() => setModalHakkinda(true)}>
@@ -131,7 +133,7 @@ function HomeScreen({ navigation }) {
                 alignItems='center'
               >
                 <Text fontWeight='bold' fontSize={20} mb={18}>
-                  Hakkında
+                  {i18n.get('about')}
                 </Text>
                 <Text
                   mb={20}
@@ -161,7 +163,7 @@ function HomeScreen({ navigation }) {
                     onPress={() => setModalHakkinda(false)}
                   >
                     <Text color='white' fontWeight='bold' fontSize={18}>
-                      Kapat
+                      {i18n.get('close')}
                     </Text>
                   </Button>
                 </Box>
@@ -212,21 +214,21 @@ function HomeScreen({ navigation }) {
                     <Box flexDirection='row' alignItems='center'>
                       <Box size={12} bg='warning' borderRadius={999} mr={8} />
                       <Text mr={10} color='textdark'>
-                        Aktif
+                        {i18n.get('active')}
                       </Text>
                       <Text color='textdark'>%{activePercentage}</Text>
                     </Box>
                     <Box flexDirection='row' alignItems='center' mt={12}>
                       <Box size={12} bg='success' borderRadius={999} mr={8} />
                       <Text mr={10} color='textdark'>
-                        Kurtarılan
+                        {i18n.get('recovered')}
                       </Text>
                       <Text color='textdark'>%{recoveredPercentage}</Text>
                     </Box>
                     <Box flexDirection='row' alignItems='center' mt={12}>
                       <Box size={12} bg='danger' borderRadius={999} mr={8} />
                       <Text mr={10} color='textdark'>
-                        Ölüm
+                        {i18n.get('death')}
                       </Text>
                       <Text color='textdark'>%{deathsPercentage}</Text>
                     </Box>
@@ -253,14 +255,14 @@ function HomeScreen({ navigation }) {
             <CardSayi
               icon={<SvgCase width={48} height={48} />}
               number={summaryData.cases}
-              subtitle='Toplam Vaka'
+              subtitle={i18n.get('totalCase')}
               placeholder={!summaryData.cases}
             />
             <Box width={26} />
             <CardSayi
               icon={<SvgDeath width={48} height={48} />}
               number={summaryData.deaths}
-              subtitle='Ölüm'
+              subtitle={i18n.get('death')}
               placeholder={!summaryData.cases}
             />
           </Box>
@@ -268,7 +270,7 @@ function HomeScreen({ navigation }) {
             <CardSayi
               icon={<SvgRecovered width={48} height={48} />}
               number={summaryData.recovered}
-              subtitle='Kurtarılan'
+              subtitle={i18n.get('recovered')}
               placeholder={!summaryData.cases}
             />
             <Box width={26} />
@@ -277,12 +279,12 @@ function HomeScreen({ navigation }) {
               number={
                 summaryData.cases - summaryData.recovered - summaryData.deaths
               }
-              subtitle='Aktif Hasta'
+              subtitle={i18n.get('activeSick')}
               placeholder={!summaryData.cases}
             />
           </Box>
           <Text fontSize={12} alignSelf='flex-start' color='textlight'>
-            Son güncelleme : {updated}
+            {i18n.get('lastUpdate')} : {updated}
           </Text>
         </ScrollView>
       </Box>
