@@ -14,6 +14,9 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { createStackNavigator } from '@react-navigation/stack';
+
+import i18n from '../i18n';
+
 import theme from '../utils/theme';
 import Box from '../components/Base/Box';
 import Text from '../components/Base/Text';
@@ -67,7 +70,7 @@ function Search({ navigation }) {
     setLoading(false);
     setRefreshing(false);
     Snackbar.show({
-      text: 'Yenilendi...',
+      text: i18n.get('refreshed'),
       textColor: 'white',
       backgroundColor: theme.colors.success,
       duration: Snackbar.LENGTH_SHORT,
@@ -99,7 +102,7 @@ function Search({ navigation }) {
         value={text}
         secureTextEntry={false}
         autoCapitalize='words' // characters, sentences ,  none
-        placeholder='Ülke adı girin'
+        placeholder={i18n.get('enterCountry')}
         paddingLeft={18}
         ref={ref => (this.inputText = ref)}
       />
@@ -120,7 +123,7 @@ function Search({ navigation }) {
     getSummaryData();
     setIsClicked(false);
     Snackbar.show({
-      text: 'Yenileniyor...',
+      text: i18n.get('refreshing'),
       textColor: 'white',
       backgroundColor: theme.colors.success,
       duration: Snackbar.LENGTH_SHORT,
@@ -145,7 +148,7 @@ function Search({ navigation }) {
         paddingRight={12}
       >
         <Text fontSize={23} fontWeight='bold'>
-          Ülkeler
+          {i18n.get('countries')}
         </Text>
 
         <Button
@@ -167,24 +170,24 @@ function Search({ navigation }) {
         <Box flexDirection='row' alignItems='center'>
           <Box size={8} bg='warning' borderRadius={999} mr={8} />
           <Text mr={10} fontSize={11} color='textdark'>
-            Aktif
+            {i18n.get('active')}
           </Text>
         </Box>
         <Box flexDirection='row' alignItems='center'>
           <Box size={8} bg='success' borderRadius={999} mr={8} />
           <Text mr={10} fontSize={11} color='textdark'>
-            Kurtarılan
+            {i18n.get('recovered')}
           </Text>
         </Box>
         <Box flexDirection='row' alignItems='center'>
           <Box size={8} bg='danger' borderRadius={999} mr={8} />
           <Text mr={10} fontSize={11} color='textdark'>
-            Ölüm
+            {i18n.get('death')}
           </Text>
         </Box>
 
         <Text fontSize={9} color='textlight' paddingRight={12}>
-          Son güncelleme: {updatedDate}
+          {i18n.get('lastUpdate')}: {updatedDate}
         </Text>
       </Box>
 

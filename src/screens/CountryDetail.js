@@ -5,8 +5,11 @@
 /***/
 
 import React, { useEffect, useState } from 'react';
-import Box from '../components/Base/Box';
 import { ScrollView, Image, ActivityIndicator } from 'react-native';
+
+import i18n from '../i18n';
+
+import Box from '../components/Base/Box';
 import SvgBack from '../components/icons/Back';
 import Text from '../components/Base/Text';
 import theme from '../utils/theme';
@@ -65,7 +68,7 @@ export default function CountryDetail({ route, navigation }) {
             >
               <Box flexDirection='row' justifyContent='space-between' mb={34}>
                 <Text fontSize={16} fontWeight='bold'>
-                  Tüm Bilgiler
+                  {i18n.get('allInfo')}
                 </Text>
 
                 <Box size={32}>
@@ -125,7 +128,7 @@ export default function CountryDetail({ route, navigation }) {
               <Box flexDirection='row' justifyContent='space-between' mt={48}>
                 <Box flexDirection='column'>
                   <Text fontSize={11} color='textdark'>
-                    Bugünkü Vaka
+                    {i18n.get('todayCases')}
                   </Text>
                   <Text fontSize={18} mt={10} fontWeight='bold'>
                     {countryDetailData.todayCases}
@@ -133,7 +136,7 @@ export default function CountryDetail({ route, navigation }) {
                 </Box>
                 <Box flexDirection='column'>
                   <Text fontSize={11} color='textdark'>
-                    Bugünkü Ölen
+                    {i18n.get('todayDeaths')}
                   </Text>
                   <Text fontSize={18} mt={10} fontWeight='bold'>
                     {countryDetailData.todayDeaths}
@@ -141,7 +144,7 @@ export default function CountryDetail({ route, navigation }) {
                 </Box>
                 <Box flexDirection='column'>
                   <Text fontSize={11} color='textdark'>
-                    Ölüm Oranı
+                    {i18n.get('deathRatio')}
                   </Text>
                   <Text fontSize={18} mt={10} fontWeight='bold'>
                     {(
@@ -167,7 +170,7 @@ export default function CountryDetail({ route, navigation }) {
             >
               <SvgChart />
 
-              <Text>Vaka Sayı Grafiği</Text>
+              <Text>{i18n.get('numberOfCasesChart')}</Text>
 
               <SvgBack
                 style={{ transform: [{ rotateY: '180deg' }] }}
@@ -188,7 +191,7 @@ export default function CountryDetail({ route, navigation }) {
             >
               <SvgChart />
 
-              <Text>Ölüm Sayı Grafiği</Text>
+              <Text>{i18n.get('numberOfDeathChart')}</Text>
 
               <SvgBack
                 style={{ transform: [{ rotateY: '180deg' }] }}

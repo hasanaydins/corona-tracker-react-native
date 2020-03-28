@@ -8,6 +8,8 @@ import React, { useEffect, useState } from 'react';
 import LineChart from 'react-native-responsive-linechart';
 import { ActivityIndicator, ScrollView } from 'react-native';
 
+import i18n from '../i18n';
+
 import Text from '../components/Base/Text';
 import Box from '../components/Base/Box';
 import theme from '../utils/theme';
@@ -87,7 +89,7 @@ export default function ChartDeaths({ route, navigation }) {
           <SvgBack color={theme.colors.textlight} />
         </Button>
 
-        <Text fontWeight='bold'>Ölüm Sayı Grafiği</Text>
+        <Text fontWeight='bold'>{i18n.get('numberOfDeathChart')}</Text>
       </Box>
 
       {!loading ? (
