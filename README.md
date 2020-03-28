@@ -19,6 +19,7 @@ Merhabalar, malumunuz aylardır dünyamız bu virüsle baş etmeye çalışıyor
    
 
 ## 🚀 Yükleme
+* Bilgisayarınızda önce react native enviroment yüklü olması gerekir : Eğer yoksa  [buradan](https://reactnative.dev/docs/environment-setup) yüklemeniz gerekir.
 
 Gerekli modülleri yüklemek için ister yarn ister npm install ile yükleyebilirsiniz. Tavsiyem yarn ı kullanmanız.
 ```
