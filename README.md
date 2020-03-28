@@ -40,4 +40,7 @@ veya
     
  
  
-[Hasan Aydın](https://www.hasanaydins.com)
+- [www.hasanaydins.com](https://www.hasanaydins.com)
+- [twitter](https://www.twitter.com/hasanaydins)
+
+
