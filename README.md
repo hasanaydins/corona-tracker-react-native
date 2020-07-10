@@ -3,7 +3,7 @@
 
 # 👋🏽 Giriş
 
-Merhabalar, malumunuz aylardır dünyamız bu virüsle baş etmeye çalışıyor. Ve gidecek gibi de durmuyor. Ben de biraz araştırmadan sonra güncel vaka sayılarını sadece bir kaç sitede görebildim. Ben de daha kolay ulaşılabilir ve anında güncel sayılara ulaşıp öğrenebilmemiz için bir mobil uygulama yapmaya karar verdim. 
+Merhabalar, malumunuz aylardır dünyamız bu virüsle baş etmeye çalışıyor. Ve gidecek gibi de durmuyor. Biraz araştırmadan sonra güncel vaka sayılarını sadece bir kaç sitede görebildim. Ben de daha kolay ulaşılabilir ve anında güncel sayılara ulaşıp öğrenebilmemiz için bir mobil uygulama yapmaya karar verdim. 
 
 ## Kullanılan Kütüphaneler
 
